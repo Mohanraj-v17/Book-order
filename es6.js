@@ -56,7 +56,7 @@ class UI {
 
         div.className = `alert alert-${type}`;
 
-      
+
         div.innerText = message;
 
         document.querySelector(".show-alert").appendChild(div);
@@ -161,7 +161,7 @@ document.querySelector("#book-form").addEventListener("submit", function (e) {
     const ui = new UI();
     const storage = new Storage();
 
-   
+
 
     if (title === "" || author === "" || isbn === "") {
 

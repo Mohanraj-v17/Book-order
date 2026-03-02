@@ -11,58 +11,52 @@
 
 <body>
 
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center mb-5">
-                <h1 class="display-4 my-5">Book Way</h1>
-                <button class="btn btn-dark" id="clear">Clear all</button>
-                
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h1 class="display-4 my-5">Book Way</h1>
+            <button class="btn btn-dark" id="clear">Clear all</button>
+
+        </div>
+
+        <div class="show-alert"></div>
+
+        <form id="book-form" class="mb-4">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="title" placeholder="">
+                <label for="title">title</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="author" placeholder="">
+                <label for="author">author</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="isbn" placeholder="">
+                <label for="isbn">isbn</label>
             </div>
 
-            <div class="show-alert"></div>
-            
-            <form id="book-form" class="mb-4">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="title" placeholder="">
-                    <label for="title">title</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="author" placeholder="" >
-                    <label for="author">author</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="isbn" placeholder="" >
-                    <label for="isbn">isbn</label>
-                </div>
+            <button type="submit" class="btn btn-dark">add</button>
+        </form>
 
-                <button type="submit" class="btn btn-dark">add</button>
-            </form>
-
+        <div class="table-responsive">
             <table class="table table-hover">
 
-                <t-head>
+                <thead>
                     <tr>
                         <th>Title</th>
                         <th>Author</th>
                         <th>ISBN</th>
                         <th></th>
                     </tr>
-                </t-head>
+                </thead>
 
                 <tbody id="book-list">
-                    <tr>
-                        <td>web dev</td>
-                        <td>Mohan</td>
-                        <td>123</td>
-                        <td class="delete">
-                            <span class="btn btn-danger">X</span>
-                        </td>
-                        
-                    </tr>
+                    <!-- Book list items will be injected here -->
                 </tbody>
 
             </table>
-
         </div>
+
+    </div>
 
 </body>
 <script src="./es6.js"></script>
